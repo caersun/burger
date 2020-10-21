@@ -17,8 +17,8 @@ router.get("/", (req, res) => {
 
 // CREATE route
 router.post("/api/burgers", (req, res) => {
-    const columnNames = ["name", "devoured"];
-    const values = [req.body.name, req.body.devoured];
+    const columnNames = ["burger_name", "devoured"];
+    const values = [req.body.burger_name, req.body.devoured];
 
     burger.insertOne(columnNames, values, (result) => {
         res.json({ id: result.insertId }); // Send back the ID
@@ -27,7 +27,7 @@ router.post("/api/burgers", (req, res) => {
 
 // UPDATE route
 router.put("/api/burgers/:id", (req, res) => {
-    const changes = { devoured: req.body.devoured };
+    const changes = `devoured = ${req.body.devoured}`;
     const condition = `id = ${req.params.id}`;
 
     console.log("condition", condition);

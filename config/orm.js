@@ -61,8 +61,9 @@ const orm = {
     },
 
     updateOne: (table, objColVals, condition, cb) => {
-        const changes = objectToSQL(objColVals);
-        const query = `UPDATE ${table} SET ${changes} WHERE ${condition}`;
+        // const changes = objectToSQL(objColVals);
+        // const translated = objectToSQL(condition);
+        const query = `UPDATE ${table} SET ${objColVals} WHERE ${condition}`;
 
         console.log(query);
 
