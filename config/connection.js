@@ -5,7 +5,7 @@ const connection = mysql.createConnection({
   host: "localhost",
   port: 3306,
   user: "root",
-  password: "$qlN1ght", // TODO: Come back and remove password
+  password: "$qlN1ght!", // TODO: Come back and remove password
   database: "burgers_db"
 });
 

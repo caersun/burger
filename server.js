@@ -17,9 +17,9 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Import routes
-const routes = require("./controllers/burgersController.js");
+const burgerRoutes = require("./controllers/burgers_controller.js");
 
-app.use(routes);
+app.use(burgerRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server is live @ http://localhost:${PORT}`);
