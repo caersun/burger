@@ -42,7 +42,7 @@ $(function() {
         $.ajax("/api/burgers/" + id, {
             type: "DELETE"
         }).then(function() {
-            console.log("deleted cat with id of", id);
+            console.log("deleted burger with id of", id);
 
             location.reload();
         });

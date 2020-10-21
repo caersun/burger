@@ -34,7 +34,7 @@ router.put("/api/burgers/:id", (req, res) => {
 
     burger.updateOne(changes, condition, (result) => {
         // If no rows changes then ID must not exist, so 404
-        if (result.changedRows === 0) {
+        if (result.changedRows == 0) {
             return res.status(404).end();
         };
 
@@ -49,7 +49,7 @@ router.delete("/api/burgers/:id", (req, res) => {
     console.log("condition", condition);
 
     burger.deleteOne(condition, (result) => {
-        if (result.changedRows === 0) {
+        if (result.affectedRows == 0) {
             return res.status(404).end();
         };
 
