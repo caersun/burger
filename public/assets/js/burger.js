@@ -21,7 +21,7 @@ $(function() {
 
         let newBurger = {
             burger_name: $("#bur").val().trim(),
-            devoured: $("[name=devoured]:checked").val().trim()
+            devoured: $("[name=devoured]:checked").val().trim() // TODO: Check what this is doing; needs to output boolean. Does this need to be changed for radio buttons to work?
         };
 
         // Send POST requrest
