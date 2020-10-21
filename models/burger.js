@@ -5,7 +5,6 @@ const orm = require("../config/orm.js");
 const tableName = 'burgers';
 
 const burger = {
-    // TODO: Create the code that will call the ORM functions using burger specific input for the ORM
     selectAll: (cb) => {
         orm.selectAll(tableName, (res) => { // TODO: What is res - a result or response?
             cb(res); // TODO: Go back to class vid - what are we doing calling res back?
