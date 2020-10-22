@@ -20,7 +20,7 @@ $(function() {
         event.preventDefault();
 
         let newBurger = {
-            burger_name: $("#bur").val().trim(),
+            burger_name: $("#burger-name").val().trim(),
             devoured: $("[name=devoured]:checked").val().trim() // TODO: Check what this is doing; needs to output boolean. Does this need to be changed for radio buttons to work?
         };
 

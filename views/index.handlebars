@@ -10,20 +10,28 @@
     <div class="row">
         <div class="col s12">
 
-            <form class="create-form">
+            <form class="create-form" action="#">
                 <div class="form-group">
-                    <label for="bur">Burger Name:</label>
-                    <input type="text" id="bur" name="burger_name">
+                    <label for="burger-name">Burger Name:</label>
+                    <input type="text" id="burger-name" name="burger_name">
                 </div>
 
                 <div class="form-group">
-                    <label for="devoured">Devoured?</label><br>
-                    <input type="radio" name="devoured" value="0"> 
-                    <span>Not yet...</span><br>
-                    <input type="radio" name="devoured" value="1" checked> 
-                    <span>Devoured!</span><br>
+                    <p>
+                        <label for="devoured-false">
+                            <input type="radio" name="devoured" value="0" id="devoured-false" checked />
+                            <span>You've never eaten this burger before!</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label for="devoured-true">
+                            <input type="radio" name="devoured" value="1" id="devoured-true" />
+                            <span>Already devoured, baby!</span>
+                        </label>
+                    </p>      
                 </div>
                 <br>
+
                 <button type="submit">Add a Burger</button>
             </form>
 
@@ -34,7 +42,7 @@
 <div class="divider"></div>
 
 <div class="section">
-    <h5>Burger Collection</h5>
+    <h3>Burger Collection</h3>
     <div class="row">
         <div class="col s12 m6 l3">
             <h6>D E V O U R</h6>
